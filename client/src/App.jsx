@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PinQuantitySelection from './components/PinQuantitySelection.jsx'
+import Scorecard from './components/Scorecard.jsx'
 
 const App = () => {
+
+  const [scoreArr, setScoreArr] = useState([])
+
   return (
     <div>
-      Hello World!
+      <PinQuantitySelection
+        scoreArr={scoreArr}
+        setScoreArr={setScoreArr}
+      />
+      <Scorecard
+        scoreArr={scoreArr}
+      />
     </div>
   );
 }
